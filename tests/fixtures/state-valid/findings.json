@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "findings": [
+    {
+      "id": "F-001",
+      "repository_id": "fixture-repository",
+      "review_id": "REVIEW-001",
+      "title": "Fixture observation",
+      "category": "correctness",
+      "priority": "P2",
+      "confidence": "HIGH",
+      "status": "CLASSIFIED",
+      "files": ["src/example.ts"],
+      "lines": [1],
+      "evidence": [
+        {
+          "source": "src/example.ts",
+          "revision": "rev-001",
+          "scope": "example function",
+          "detail": "fixture evidence"
+        }
+      ],
+      "root_cause": "fixture",
+      "user_impact": "none",
+      "plain_language_explanation": "This is a fixture.",
+      "ownership": "ADVISORY",
+      "proposed_fix": "none",
+      "decision_dependency": null,
+      "dependencies": [],
+      "acceptance_criteria": ["Record the observation"],
+      "verification_method": "Inspect the fixture"
+    }
+  ]
+}

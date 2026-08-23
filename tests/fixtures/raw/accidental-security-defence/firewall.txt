@@ -1,0 +1,1 @@
+The staging network currently blocks requests to private address ranges.

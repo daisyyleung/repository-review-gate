@@ -1,0 +1,8 @@
+{
+  "decision_id": "DECISION-001",
+  "question": "authoritative state layer",
+  "decision": "database",
+  "status": "approved",
+  "approved_at_revision": "rev-old",
+  "rationale": "Database functions enforce tenant and state invariants."
+}

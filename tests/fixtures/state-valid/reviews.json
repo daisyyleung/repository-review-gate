@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "reviews": [
+    {
+      "id": "REVIEW-001",
+      "repository_id": "fixture-repository",
+      "revision": "rev-001",
+      "scope": ["correctness"],
+      "status": "COMPLETE",
+      "finding_ids": ["F-001"],
+      "decision_ids": [],
+      "verification_ids": []
+    }
+  ]
+}

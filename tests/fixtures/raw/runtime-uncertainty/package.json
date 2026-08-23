@@ -1,0 +1,5 @@
+{
+  "name": "bundle-check-fixture",
+  "scripts": { "build": "framework build" },
+  "dependencies": { "runtime-parser": "^1.2.0" }
+}

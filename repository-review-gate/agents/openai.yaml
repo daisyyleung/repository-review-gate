@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repository Review Gate"
+  short_description: "Review repositories and gate remediation decisions"
+  default_prompt: "Use $repository-review-gate to review this repository, validate evidence, separate priority from action ownership, surface human decisions, and define verified remediation."
