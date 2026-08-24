@@ -183,15 +183,18 @@ def _check_links(skill_dir: Path, skill_text: str) -> list[str]:
 def _check_public_safe(root: Path) -> list[str]:
     errors: list[str] = []
     for path in sorted(item for item in root.rglob("*") if item.is_file()):
+        relative_path = path.relative_to(root)
+        if ".git" in relative_path.parts:
+            continue
         try:
             text = path.read_text(encoding="utf-8")
         except (UnicodeDecodeError, OSError):
             continue
         for match in MACHINE_PATH_RE.finditer(text):
-            errors.append(f"{path.relative_to(root)}: machine-specific path {match.group(0)!r}")
+            errors.append(f"{relative_path}: machine-specific path {match.group(0)!r}")
         for pattern in SECRET_PATTERNS:
             if pattern.search(text):
-                errors.append(f"{path.relative_to(root)}: secret-like value detected")
+                errors.append(f"{relative_path}: secret-like value detected")
     return errors
 
 
