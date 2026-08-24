@@ -16,6 +16,20 @@ Run the complete local validation with:
 python3 scripts/validate_repository.py
 ```
 
+## Continuous integration
+
+GitHub Actions uses the same dependency-free validation command for pushes to
+`main` and pull requests. The workflow runs the validator on Python 3.11 and
+3.13 with read-only repository access:
+
+```yaml
+permissions:
+  contents: read
+```
+
+See [`.github/workflows/repository-review-gate.yml`](.github/workflows/repository-review-gate.yml)
+for the complete workflow.
+
 ## Core workflow
 
 ```text
